@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.main-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heading{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.heading h1{
+    font-size: 2rem;
+}
+
+.btn{
+    padding: 14px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fc0350;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    transition: all 0.1s linear;
+    margin-top: 2rem;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.56) url('../img/home.jpg')no-repeat center right/cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    color: #fff;
+}
+
+
+.navbar{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navLinks{
+    display: flex;
+    list-style: none;
+}
+.navLinks li {
+    margin-right: 2rem;
+}
+.navLinks li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.home-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.home-container h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.home-container p{
+    max-width: 600px;
+    font-size: 18px;
+}
+
+.home-container .btn{
+    margin-top: 3rem;
+}
+
+
+.about-container{
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    gap: 3rem;
+}
+.about-container img{
+    height: 300px;
+    width: 400px;
+}
+.about-left,.about-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-left{
+    
+    align-items: center;
+  
+}
+.about-right h2{
+    margin-bottom: 1rem;
+}
+
+.services{
+    min-height:800px ;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.56) url('../img/serv.jpg')no-repeat center center/cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    color: #fff;
+}
+
+
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.card{
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #F5F5F5;
+    color: black !important;
+    padding: 1rem;
+    box-shadow: 9px 8px 22px -6px rgba(234,229,229,0.75);
+-webkit-box-shadow: 9px 8px 22px -6px rgba(234,229,229,0.75);
+-moz-box-shadow: 9px 8px 22px -6px rgba(234,229,229,0.75);
+cursor: pointer;
+}
+
+.card h2{
+    margin-bottom: 1rem;
+}
+
+.contact-container{
+    /* background-color: lightblue; */
+    width: 60%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.contact-container .form-div{
+    margin-bottom: 1rem;
+}
+.form-div input,.form-div textarea{
+    width: 100%;
+    font-size: 14px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.form-div textarea{
+    height: 120px;
+}
+.form-div label{
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-container .btn{
+    margin-top: 1rem !important;
+}
+
+footer{
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    padding: 10px;
+}
+
+
+@media(max-width:780px){
+    
+    .burger{
+        display: block;
+    }
+    .navbar{
+        padding: 0 1rem;
+    }
+    .navLinks{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top:0;
+        left: -100%;
+        background: #333;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1.2rem;
+        transition: all 0.3s linear;
+    }
+    .navLinks.show{
+        left: 0%;
+    }
+    .home-container h1{
+        font-size: 2.5rem;
+    }
+    .about-container{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+    .about-container img{
+        width: 300px;
+        height: 200px;
+    }
+    .services{
+        height: auto;
+    }
+    .service-container{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        margin: auto;
+        height: 250px;
+        width: 300px;
+        
+    }
+    .contact-container{
+        width: 90%;
+    }
+}
